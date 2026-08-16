@@ -5,17 +5,17 @@ Updated: 2026-08-16 by Codex
 ## Now
 
 JoeAman.ai is a personal website and project hub built with Astro and npm.
-The current milestone is establishing the GitHub-to-Cloudflare Pages delivery
-pipeline and connecting the joeaman.ai domain.
+The public GitHub repository now exists and the local `main` branch is ready
+for its initial push. The current milestone is connecting Cloudflare Pages and
+then the joeaman.ai domain.
 
 ## Next steps
 
-1. [ ] Authenticate GitHub CLI and create `josephaman-prog/joeaman-ai`.
-2. [ ] Approve and push the initial `main` branch.
-3. [ ] Connect the GitHub repository to Cloudflare Pages.
-4. [ ] Add `joeaman.ai` to Cloudflare and review imported DNS records and DNSSEC.
-5. [ ] Change the GoDaddy nameservers after the DNS review, then attach the custom domain.
-6. [ ] Define and build the first content and visual-design milestone.
+1. [ ] Approve and push the initial `main` branch.
+2. [ ] Connect the GitHub repository to Cloudflare Pages.
+3. [ ] Add `joeaman.ai` to Cloudflare and review imported DNS records and DNSSEC.
+4. [ ] Change the GoDaddy nameservers after the DNS review, then attach the custom domain.
+5. [ ] Define and build the first content and visual-design milestone.
 
 ## Known issues
 
@@ -31,4 +31,4 @@ pipeline and connecting the joeaman.ai domain.
 
 ## Recent sessions
 
-- 2026-08-16 — Selected Astro/npm, audited the Mac toolchain, adopted the project framework, and began the GitHub/Cloudflare bootstrap.
+- 2026-08-16 — Selected Astro/npm, installed the Node toolchain, adopted the project framework, validated the site, and created the public GitHub repository.
