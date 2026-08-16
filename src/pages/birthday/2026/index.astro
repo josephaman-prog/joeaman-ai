@@ -1,0 +1,208 @@
+---
+import { Image } from 'astro:assets';
+import barbecueOne from './_assets/barbecue-01.jpeg';
+import barbecueTwo from './_assets/barbecue-02.jpeg';
+import { contributions, grillMenu, guests, party } from './_data/party';
+import './_styles/birthday.css';
+
+const title = `Joe's ${party.year} Birthday — Pool & BBQ`;
+const description = `${party.date} at ${party.location}. A pool party, barbecue, and one more photo for the trilogy.`;
+const ogImage = new URL('/birthday/2026/og.png', Astro.site);
+const repeatedTicker = Array.from({ length: 2 }, () => [
+	'Pool party',
+	'Wagyu on fire',
+	'Verve Suites',
+	'6 September',
+	'Photo no. 3',
+]).flat();
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="robots" content="noindex, nofollow" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImage} />
+		<meta property="og:image:alt" content="Joe's 2026 pool and barbecue birthday invitation" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImage} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="shell">
+				<a class="wordmark" href="/">joeaman.ai</a>
+				<a class="header-link" href="#guest-list">The crew · {guests.length}</a>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero" aria-labelledby="party-title">
+				<div class="shell hero-grid">
+					<div>
+						<p class="eyebrow">Joe's birthday · Kuala Lumpur</p>
+						<h1 id="party-title">Pool <span>&amp; BBQ</span></h1>
+						<p class="hero-copy">{party.tagline}</p>
+						<a class="scroll-note" href="#the-plan">Dive into the plan</a>
+					</div>
+
+					<aside class="event-card" aria-label="Party details">
+						<p class="card-label">Save the date</p>
+						<time datetime="2026-09-06">{party.date}<br />{party.year}</time>
+						<p class="location">{party.location}</p>
+					</aside>
+				</div>
+			</section>
+
+			<div class="ticker" aria-hidden="true">
+				<div class="ticker-track">
+					{repeatedTicker.map((item) => <span>{item}</span>)}
+				</div>
+			</div>
+
+			<section class="section plan-section" id="the-plan" aria-labelledby="plan-title">
+				<div class="shell">
+					<div class="section-heading">
+						<div>
+							<p class="section-kicker">The highly scientific plan</p>
+							<h2 class="section-title" id="plan-title">Three simple moves</h2>
+						</div>
+						<p class="section-intro">Bring swimwear, an appetite, and your best recreation-of-a-previous-barbecue-photo energy.</p>
+					</div>
+
+					<div class="plan-grid">
+						<article class="plan-card">
+							<p class="card-label">01 · Splash</p>
+							<h3>Pool<br />first</h3>
+							<p>Cool off upstairs while the Kuala Lumpur sun handles the preheating.</p>
+						</article>
+						<article class="plan-card">
+							<p class="card-label">02 · Sizzle</p>
+							<h3>Fire<br />second</h3>
+							<p>Wagyu, burgers, smoke, and a grill lineup with absolutely no restraint.</p>
+						</article>
+						<article class="plan-card">
+							<p class="card-label">03 · Evidence</p>
+							<h3>Make<br />the shot</h3>
+							<p>Same location. Same pose. One final frame to complete the trilogy.</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section class="section photo-story" aria-labelledby="photos-title">
+				<div class="shell">
+					<div class="section-heading">
+						<div>
+							<p class="section-kicker">The running tradition</p>
+							<h2 class="section-title" id="photos-title">Two down. One to go.</h2>
+						</div>
+						<p class="section-intro">The barbecue portrait has become a series. September 6 is opening night for part three.</p>
+					</div>
+
+					<div class="photo-grid">
+						<figure class="photo-card">
+							<span class="photo-number">01</span>
+							<Image
+								src={barbecueOne}
+								alt="Joe and a guest posing with a steak beside the barbecue at Verve Suites"
+								widths={[384, 640, 768]}
+								sizes="(max-width: 600px) calc(100vw - 3rem), (max-width: 860px) 45vw, 30vw"
+								loading="lazy"
+							/>
+							<figcaption class="photo-caption"><span>The original</span><em>Verve Suites</em></figcaption>
+						</figure>
+
+						<figure class="photo-card">
+							<span class="photo-number">02</span>
+							<Image
+								src={barbecueTwo}
+								alt="Joe and a guest recreating the barbecue steak pose at Verve Suites"
+								widths={[384, 640, 768]}
+								sizes="(max-width: 600px) calc(100vw - 3rem), (max-width: 860px) 45vw, 30vw"
+								loading="lazy"
+							/>
+							<figcaption class="photo-caption"><span>The sequel</span><em>Back by demand</em></figcaption>
+						</figure>
+
+						<div class="photo-card placeholder" aria-label="Placeholder for the third barbecue photo">
+							<span class="photo-number">03</span>
+							<div class="placeholder-copy">
+								<strong>Your photo here</strong>
+								<span>To be recreated on September 6.</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section menu-section" aria-labelledby="menu-title">
+				<div class="shell">
+					<div class="section-heading">
+						<div>
+							<p class="section-kicker">On the fire</p>
+							<h2 class="section-title" id="menu-title">The grill lineup</h2>
+						</div>
+						<p class="section-intro">A deeply serious beef programme. Tap any cut to see the source.</p>
+					</div>
+
+					<div class="menu-list">
+						{grillMenu.map((item, index) => (
+							<a class="menu-item" href={item.url} target="_blank" rel="noreferrer">
+								<span class="menu-index">{String(index + 1).padStart(2, '0')}</span>
+								<span>
+									<span class="menu-name">{item.name}</span>
+									<span class="menu-detail">{item.detail}</span>
+								</span>
+								<span class="menu-quantity">{item.quantity} ↗</span>
+							</a>
+						))}
+					</div>
+
+					<div class="bring-card">
+						<div>
+							<h3>Drinks, sides &amp; guest additions</h3>
+							{contributions.length > 0 ? (
+								<p>{contributions.map((item) => `${item.guest}: ${item.name}`).join(' · ')}</p>
+							) : (
+								<p>The rest of the table is still taking shape. New bottles, dishes, and volunteered favourites will appear here.</p>
+							)}
+						</div>
+						<div class="bring-stamp">Updates<br />incoming</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section guest-section" id="guest-list" aria-labelledby="guests-title">
+				<div class="shell">
+					<div class="section-heading">
+						<div>
+							<p class="section-kicker">Poolside roll call</p>
+							<h2 class="section-title" id="guests-title">The crew</h2>
+						</div>
+						<p class="section-intro">Eleven people. One pool. A frankly unreasonable amount of Wagyu.</p>
+					</div>
+
+					<div class="guest-grid">
+						{guests.map((guest) => <div class="guest">{guest}</div>)}
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="party-footer">
+			<div class="shell">
+				<p class="footer-big">See you<br />poolside.</p>
+				<p class="footer-small">Sunday, 6 September 2026 · Verve Suites, Kuala Lumpur</p>
+			</div>
+		</footer>
+	</body>
+</html>
