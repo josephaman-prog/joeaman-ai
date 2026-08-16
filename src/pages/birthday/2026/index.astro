@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-import barbecueOne from './_assets/barbecue-01.jpeg';
-import barbecueTwo from './_assets/barbecue-02.jpeg';
+import originalPhoto from './_assets/barbecue-02.jpeg';
+import sequelPhoto from './_assets/barbecue-01.jpeg';
 import { contributions, grillMenu, guests, party } from './_data/party';
 import './_styles/birthday.css';
 
@@ -112,7 +112,7 @@ const repeatedTicker = Array.from({ length: 2 }, () => [
 						<figure class="photo-card">
 							<span class="photo-number">01</span>
 							<Image
-								src={barbecueOne}
+								src={originalPhoto}
 								alt="Joe and a guest posing with a steak beside the barbecue at Verve Suites"
 								widths={[384, 640, 768]}
 								sizes="(max-width: 600px) calc(100vw - 3rem), (max-width: 860px) 45vw, 30vw"
@@ -124,7 +124,7 @@ const repeatedTicker = Array.from({ length: 2 }, () => [
 						<figure class="photo-card">
 							<span class="photo-number">02</span>
 							<Image
-								src={barbecueTwo}
+								src={sequelPhoto}
 								alt="Joe and a guest recreating the barbecue steak pose at Verve Suites"
 								widths={[384, 640, 768]}
 								sizes="(max-width: 600px) calc(100vw - 3rem), (max-width: 860px) 45vw, 30vw"
