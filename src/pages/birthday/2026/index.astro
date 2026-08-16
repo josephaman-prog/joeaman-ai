@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import grillPrepPhoto from './_assets/grill-prep.png';
 import originalPhoto from './_assets/barbecue-02.jpeg';
 import sequelPhoto from './_assets/barbecue-01.jpeg';
 import { contributions, grillMenu, guests, party } from './_data/party';
@@ -153,6 +154,23 @@ const repeatedTicker = Array.from({ length: 2 }, () => [
 						</div>
 						<p class="section-intro">A deeply serious beef programme. Tap any cut to see the source.</p>
 					</div>
+
+					<figure class="grill-feature">
+						<div class="grill-image-wrap">
+							<Image
+								src={grillPrepPhoto}
+								alt="Joe seasoning steaks at the barbecue preparation counter at Verve Suites"
+								widths={[405, 640, 810]}
+								sizes="(max-width: 860px) calc(100vw - 2.75rem), 48vw"
+								loading="lazy"
+							/>
+						</div>
+						<figcaption>
+							<span class="card-label">Prep station · Verve Suites</span>
+							<strong>The calm before the sizzle.</strong>
+							<p>Steaks getting their final seasoning before they hit the heat.</p>
+						</figcaption>
+					</figure>
 
 					<div class="menu-list">
 						{grillMenu.map((item, index) => (

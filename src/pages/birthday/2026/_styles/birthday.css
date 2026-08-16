@@ -471,6 +471,51 @@ img {
 	background: var(--paper);
 }
 
+.grill-feature {
+	display: grid;
+	grid-template-columns: minmax(0, 1.08fr) minmax(16rem, 0.72fr);
+	align-items: center;
+	gap: 0;
+	margin: 0 0 clamp(3rem, 7vw, 5rem);
+	border: var(--line);
+	background: var(--ink);
+	color: var(--cream);
+	box-shadow: 10px 10px 0 var(--coral);
+}
+
+.grill-image-wrap {
+	padding: 0.75rem;
+	background: var(--cream);
+}
+
+.grill-feature img {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+}
+
+.grill-feature figcaption {
+	padding: clamp(1.75rem, 5vw, 4rem);
+}
+
+.grill-feature strong {
+	display: block;
+	margin-top: clamp(2rem, 6vw, 5rem);
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: clamp(2.7rem, 5vw, 5rem);
+	letter-spacing: -0.035em;
+	line-height: 0.9;
+	text-transform: uppercase;
+}
+
+.grill-feature figcaption p {
+	max-width: 25rem;
+	margin: 1.35rem 0 0;
+	font-family: Georgia, 'Times New Roman', serif;
+	font-size: 1.1rem;
+	font-style: italic;
+}
+
 .menu-list {
 	border-top: var(--line);
 }
@@ -702,6 +747,18 @@ img {
 
 	.plan-grid {
 		grid-template-columns: 1fr;
+	}
+
+	.grill-feature {
+		grid-template-columns: 1fr;
+	}
+
+	.grill-feature figcaption {
+		padding: 2rem;
+	}
+
+	.grill-feature strong {
+		margin-top: 2.5rem;
 	}
 
 	.plan-card,
