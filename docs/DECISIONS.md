@@ -4,6 +4,20 @@ Append-only, newest first. One entry per durable decision. When this file
 passes ~15 entries, graduate to a `docs/decisions/` folder of numbered
 records.
 
+## 2026-08-16 — Co-locate one-off page support files with their route
+
+**Decision:** Keep one-off pages within Astro's `src/pages/` route structure.
+Store page-specific assets, data, components, and styles in underscore-prefixed
+support folders beside the route, and promote an item to a shared top-level
+folder only after multiple pages use it.
+
+**Why:** This keeps each page self-contained and easy to update while Astro
+excludes support folders from routing and can still optimize imported images.
+It also avoids a growing global asset bucket with unclear ownership.
+
+**Instead of:** Putting every asset and component into site-wide folders or
+creating a separate application for an ordinary static subpage.
+
 ## 2026-08-16 — Use Cloudflare DNS with the apex domain as canonical
 
 **Decision:** Keep GoDaddy as the registrar while using Cloudflare as the

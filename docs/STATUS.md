@@ -10,18 +10,20 @@ npm. GitHub `main` deploys automatically through Cloudflare Pages to
 publicly validated DNSSEC; GoDaddy remains the registrar. `www.joeaman.ai`
 redirects permanently to the apex domain.
 
-The first subpage is `/birthday/2026/`: a responsive, unlisted birthday
-invitation for Joe's September 5 pool party and barbecue at Verve Suites. It
-includes the supplied barbecue photos, an editable guest list and menu, a
-placeholder for the planned third photo, and a route-specific social preview
-image. It is part of `main` and deploys through the existing Cloudflare Pages
-Git integration.
+The first subpage is live at <https://joeaman.ai/birthday/2026/>. It is a
+responsive, unlisted invitation for Joe's September 5, 2026 pool party and
+barbecue at Verve Suites. The page includes a full-frame original/sequel photo
+gallery, a placeholder for the planned third photo, a Grill Lineup prep photo,
+an editable guest list and menu, and a route-specific social preview image.
+Page-specific assets, data, and styles are colocated with the route in
+underscored support folders.
 
 ## Next steps
 
-1. [ ] Review the birthday page copy and design; add the event time when known.
-2. [ ] Update the guest, drinks, and contribution data as plans develop.
-3. [ ] Add focused checks when the site gains behavior not covered by the Astro build.
+1. [ ] Add the event start time when known.
+2. [ ] Update the guest list, drinks, and contributed dishes as plans develop.
+3. [ ] Replace the third-photo placeholder after the September 5 barbecue.
+4. [ ] Add focused checks when the site gains behavior not covered by the Astro build.
 
 ## Known issues
 
@@ -39,4 +41,5 @@ Git integration.
 
 ## Recent sessions
 
+- 2026-08-16 — Built and deployed the `/birthday/2026/` pool-party invitation with responsive photos, editable party data, the Grill Lineup, and a social preview card.
 - 2026-08-16 — Created the Astro/npm project and public GitHub repository, adopted the project framework, connected Cloudflare Pages, and launched `joeaman.ai` with HTTPS, an apex-domain redirect, and publicly validated DNSSEC.
