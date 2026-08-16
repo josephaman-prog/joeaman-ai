@@ -11,7 +11,7 @@ publicly validated DNSSEC; GoDaddy remains the registrar. `www.joeaman.ai`
 redirects permanently to the apex domain.
 
 The first subpage is `/birthday/2026/`: a responsive, unlisted birthday
-invitation for Joe's September 6 pool party and barbecue at Verve Suites. It
+invitation for Joe's September 5 pool party and barbecue at Verve Suites. It
 includes the supplied barbecue photos, an editable guest list and menu, a
 placeholder for the planned third photo, and a route-specific social preview
 image. It is part of `main` and deploys through the existing Cloudflare Pages
@@ -31,7 +31,7 @@ Git integration.
 
 ## Open questions
 
-- What time should the September 6 birthday party begin?
+- What time should the September 5 birthday party begin?
 - Which drinks, sides, and guest contributions should be added to the menu?
 - Decide the URL and deployment boundary for the first self-contained project
   when its requirements are known; the initial convention is
