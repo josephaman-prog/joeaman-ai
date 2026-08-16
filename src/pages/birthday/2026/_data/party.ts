@@ -2,7 +2,7 @@ export const party = {
 	year: '2026',
 	date: 'Saturday, 5 September',
 	location: 'Verve Suites, Kuala Lumpur',
-	tagline: 'Pool first. Fire second. One more photo for the trilogy.',
+	tagline: 'Pool first. Fire second. Three photos down—time to make number four.',
 };
 
 export const guests = [

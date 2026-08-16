@@ -12,17 +12,17 @@ redirects permanently to the apex domain.
 
 The first subpage is live at <https://joeaman.ai/birthday/2026/>. It is a
 responsive, unlisted invitation for Joe's September 5, 2026 pool party and
-barbecue at Verve Suites. The page includes a full-frame original/sequel photo
-gallery, a placeholder for the planned third photo, a Grill Lineup prep photo,
-an editable guest list and menu, and a route-specific social preview image.
-Page-specific assets, data, and styles are colocated with the route in
-underscored support folders.
+barbecue at Verve Suites. The page includes the first three full-frame photos
+in the recurring barbecue series, sets up the planned fourth photo, and also
+features a separate Grill Lineup prep photo, an editable guest list and menu,
+and a route-specific social preview image. Page-specific assets, data, and
+styles are colocated with the route in underscored support folders.
 
 ## Next steps
 
 1. [ ] Add the event start time when known.
 2. [ ] Update the guest list, drinks, and contributed dishes as plans develop.
-3. [ ] Replace the third-photo placeholder after the September 5 barbecue.
+3. [ ] Add the fourth photo after the September 5 barbecue.
 4. [ ] Add focused checks when the site gains behavior not covered by the Astro build.
 
 ## Known issues

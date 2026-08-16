@@ -335,6 +335,10 @@ img {
 	transform: rotate(2deg);
 }
 
+.photo-card:nth-child(3) {
+	transform: rotate(-1deg);
+}
+
 .photo-card img {
 	width: 100%;
 	height: auto;
@@ -374,39 +378,6 @@ img {
 	font-weight: 400;
 	letter-spacing: 0;
 	text-transform: none;
-}
-
-.photo-card.placeholder {
-	display: grid;
-	min-height: 31rem;
-	place-items: center;
-	padding: 1.5rem;
-	border-color: var(--ink);
-	background:
-		repeating-radial-gradient(circle at 20% 20%, transparent 0 20px, rgba(23, 32, 31, 0.08) 21px 23px),
-		var(--sun);
-	transform: rotate(-1deg);
-}
-
-.placeholder-copy {
-	max-width: 13rem;
-	text-align: center;
-}
-
-.placeholder-copy strong {
-	display: block;
-	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-	font-size: 3.5rem;
-	letter-spacing: -0.03em;
-	line-height: 0.9;
-	text-transform: uppercase;
-}
-
-.placeholder-copy span {
-	display: block;
-	margin-top: 1rem;
-	font-family: Georgia, 'Times New Roman', serif;
-	font-style: italic;
 }
 
 .plan-section {
@@ -739,9 +710,8 @@ img {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
-	.photo-card.placeholder {
+	.photo-card:nth-child(3) {
 		grid-column: 1 / -1;
-		min-height: 20rem;
 		margin-top: 1.5rem;
 	}
 
@@ -809,14 +779,10 @@ img {
 	.photo-card,
 	.photo-card:nth-child(1),
 	.photo-card:nth-child(2),
-	.photo-card.placeholder {
+	.photo-card:nth-child(3) {
 		grid-column: auto;
 		margin-top: 0;
 		transform: none;
-	}
-
-	.photo-card.placeholder {
-		min-height: 25rem;
 	}
 
 	.menu-item {

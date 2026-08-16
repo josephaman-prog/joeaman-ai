@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import thirdPhoto from './_assets/barbecue-03.png';
 import grillPrepPhoto from './_assets/grill-prep.png';
 import originalPhoto from './_assets/barbecue-02.jpeg';
 import sequelPhoto from './_assets/barbecue-01.jpeg';
@@ -7,14 +8,14 @@ import { contributions, grillMenu, guests, party } from './_data/party';
 import './_styles/birthday.css';
 
 const title = `Joe's ${party.year} Birthday — Pool & BBQ`;
-const description = `${party.date} at ${party.location}. A pool party, barbecue, and one more photo for the trilogy.`;
+const description = `${party.date} at ${party.location}. A pool party, barbecue, and one more photo for the series.`;
 const ogImage = new URL('/birthday/2026/og.png', Astro.site);
 const repeatedTicker = Array.from({ length: 2 }, () => [
 	'Pool party',
 	'Wagyu on fire',
 	'Verve Suites',
 	'5 September',
-	'Photo no. 3',
+	'Photo no. 4',
 ]).flat();
 ---
 
@@ -93,7 +94,7 @@ const repeatedTicker = Array.from({ length: 2 }, () => [
 						<article class="plan-card">
 							<p class="card-label">03 · Evidence</p>
 							<h3>Make<br />the shot</h3>
-							<p>Same location. Same pose. One final frame to complete the trilogy.</p>
+							<p>Same location. Same pose. One more frame to take the tradition into part four.</p>
 						</article>
 					</div>
 				</div>
@@ -104,9 +105,9 @@ const repeatedTicker = Array.from({ length: 2 }, () => [
 					<div class="section-heading">
 						<div>
 							<p class="section-kicker">The running tradition</p>
-							<h2 class="section-title" id="photos-title">Two down. One to go.</h2>
+							<h2 class="section-title" id="photos-title">Three down. One to go.</h2>
 						</div>
-						<p class="section-intro">The barbecue portrait has become a series. September 5 is opening night for part three.</p>
+						<p class="section-intro">The barbecue portrait has become a series. September 5 is opening night for part four.</p>
 					</div>
 
 					<div class="photo-grid">
@@ -134,13 +135,17 @@ const repeatedTicker = Array.from({ length: 2 }, () => [
 							<figcaption class="photo-caption"><span>The sequel</span><em>Back by demand</em></figcaption>
 						</figure>
 
-						<div class="photo-card placeholder" aria-label="Placeholder for the third barbecue photo">
+						<figure class="photo-card">
 							<span class="photo-number">03</span>
-							<div class="placeholder-copy">
-								<strong>Your photo here</strong>
-								<span>To be recreated on September 5.</span>
-							</div>
-						</div>
+							<Image
+								src={thirdPhoto}
+								alt="Joe and a guest continuing the barbecue steak-pose tradition at Verve Suites"
+								widths={[405, 640, 810]}
+								sizes="(max-width: 600px) calc(100vw - 3rem), (max-width: 860px) 45vw, 30vw"
+								loading="lazy"
+							/>
+							<figcaption class="photo-caption"><span>The trilogy</span><em>And still counting</em></figcaption>
+						</figure>
 					</div>
 				</div>
 			</section>
