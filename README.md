@@ -15,6 +15,13 @@ npm run dev
 Create a production build with `npm run build`. Cloudflare Pages builds the
 `main` branch with that command and publishes the `dist/` directory.
 
+## Deployment
+
+- Cloudflare Pages project: `joeaman-ai`
+- Production branch: `main` with automatic deployments enabled
+- Current Pages URL: [joeaman-ai.pages.dev](https://joeaman-ai.pages.dev)
+- Intended custom domain: [joeaman.ai](https://joeaman.ai) (DNS setup pending)
+
 ## Project docs
 
 - Current state and next steps: [`docs/STATUS.md`](docs/STATUS.md) — start here
