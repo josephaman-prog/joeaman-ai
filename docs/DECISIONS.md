@@ -4,6 +4,20 @@ Append-only, newest first. One entry per durable decision. When this file
 passes ~15 entries, graduate to a `docs/decisions/` folder of numbered
 records.
 
+## 2026-08-16 — Use Cloudflare DNS with the apex domain as canonical
+
+**Decision:** Keep GoDaddy as the registrar while using Cloudflare as the
+authoritative DNS provider. Serve the Pages project at `joeaman.ai`, redirect
+`www.joeaman.ai` permanently to the apex domain, and protect the delegation
+with Cloudflare DNSSEC and a DS record at GoDaddy.
+
+**Why:** This keeps registration and hosting responsibilities clear, gives the
+site one canonical public URL, and uses the DNS and certificate path required
+for an apex Cloudflare Pages domain.
+
+**Instead of:** Keeping authoritative DNS at GoDaddy, treating `www` as a
+second canonical hostname, or leaving the DNS delegation unsigned.
+
 ## 2026-08-16 — Start with one repository
 
 **Decision:** Keep the main site at the repository root. When a distinct

@@ -19,8 +19,10 @@ Create a production build with `npm run build`. Cloudflare Pages builds the
 
 - Cloudflare Pages project: `joeaman-ai`
 - Production branch: `main` with automatic deployments enabled
-- Current Pages URL: [joeaman-ai.pages.dev](https://joeaman-ai.pages.dev)
-- Intended custom domain: [joeaman.ai](https://joeaman.ai) (DNS setup pending)
+- Production URL: [joeaman.ai](https://joeaman.ai)
+- Pages fallback URL: [joeaman-ai.pages.dev](https://joeaman-ai.pages.dev)
+- `www.joeaman.ai` redirects permanently to the apex domain
+- GoDaddy remains the registrar; Cloudflare provides authoritative DNS and DNSSEC
 
 ## Project docs
 
